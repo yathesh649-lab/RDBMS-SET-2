@@ -1,17 +1,27 @@
-USE CollegeDB;
+SET SERVEROUTPUT ON;
 
-DROP PROCEDURE IF EXISTS CheckResult;
-
-DELIMITER $$
-
-CREATE PROCEDURE CheckResult(IN p_marks INT)
+DECLARE
+    marks NUMBER := 65;
 BEGIN
+    IF marks >= 40 THEN
+        DBMS_OUTPUT.PUT_LINE('Student has Passed');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Student has Failed');
+    END IF;
+END;
+/
 
-    -- Use IF-ELSE to check pass/fail
+Output
+For marks = 65:
 
-END $$
+Student has Passed
 
-DELIMITER ;
+For example, if you change:
 
--- Test the procedure
-CALL CheckResult(75);
+marks NUMBER := 35;
+
+the output will be:
+
+Student has Failed
+
+
