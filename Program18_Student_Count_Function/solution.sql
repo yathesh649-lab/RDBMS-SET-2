@@ -1,5 +1,3 @@
--- Create Function
-
 CREATE OR REPLACE FUNCTION Count_Students(
     p_DepartmentID IN NUMBER
 )
