@@ -9,11 +9,4 @@ BEGIN
 END;
 /
 
-Output
-Sum = 30
-
-Note: Enable output in Oracle SQL Developer using:
-
-SET SERVEROUTPUT ON;
-
 
